@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Person = (props) => {
     return (
         <div>
@@ -11,3 +13,12 @@ export const Person = (props) => {
         </div>
     );
 }
+
+// Pass a different type and check the console
+Person.propTypes = {
+    name: PropTypes.string,
+    email: PropTypes.string,
+    age: PropTypes.number,
+    isMarried: PropTypes.bool,
+    friends: PropTypes.arrayOf(PropTypes.string)
+};
